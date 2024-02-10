@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: rgb(83, 160, 227);">
+      calculator
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item class="number">
+    <ion-label>
+      {{number}}
+    </ion-label>
+  </ion-item>
+  <div *ngFor="let line of buttons">
+    <ion-button *ngFor="let num of line" (click)="onpressbutton(num)" class="buttons">{{num}}</ion-button>
+  </div>
+</ion-content>
